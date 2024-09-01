@@ -1,6 +1,7 @@
 package com.example.youtube
 
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -72,6 +73,13 @@ class YoutubeListAdapter(
                 title = itemView.findViewById(R.id.title)
                 thumnail = itemView.findViewById(R.id.thumbnail)
                 content = itemView.findViewById(R.id.content)
+
+                itemView.setOnClickListener{
+                    val intent = Intent(context, YoutubeItemActivity::class.java)
+                    intent.putExtra("video_url",youtubeItemList.get(adapterPosition).video)
+                    context.startActivity(intent)
+
+                }
             }
         }
 
