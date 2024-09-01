@@ -2,7 +2,9 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.Youtube" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">@android:color/black</item> <!-- 또는 원하는 색상 -->
+
+        <item name="android:windowLightStatusBar" tools:targetApi="l">true</item> <!-- 상태바 텍스트 색상 조정 -->
     </style>
 
     <style name="Theme.Youtube" parent="Base.Theme.Youtube" />
